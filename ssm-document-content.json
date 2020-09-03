@@ -1,0 +1,22 @@
+{
+    "schemaVersion": "1.2",
+    "description": "Run a shell script.",
+    "parameters": {
+      "commands": {
+        "type": "StringList",
+        "description": "(Required) Specify a shell script or a command to run.",
+        "minItems": 1,
+        "displayType": "textarea"
+      }
+    },
+    "runtimeConfig": {
+      "aws:runShellScript": {
+        "properties": [
+          {
+            "id": "0.aws:runShellScript",
+            "runCommand": "{{ commands }}"
+          }
+        ]
+      }
+    }
+}
